@@ -1,0 +1,53 @@
+<div class="container mt-5">
+    <div class="d-flex bd-highlight mb-3">
+        <div class="me-auto p-2 bd-highlight">
+            <h2 class="mb-4">Lista de Clientes</h2>
+        </div>
+        <div class="p-2 bd-highlight">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Cadastro de Clientes</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Lista de Clientes</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Observações</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each clientes}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{nome}}</td>
+                    <td>{{cep}}</td>
+                    <td>{{endereco}}</td>
+                    <td>{{bairro}}</td>
+                    <td>{{cidade}}</td>
+                    <td>{{estado}}</td>
+                    <td>{{observacoes}}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Ações">
+                            <a href="#" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Excluir</a>
+                        </div>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
